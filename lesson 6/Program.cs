@@ -57,6 +57,16 @@ DisplayFancyMessage(backgroundColor: ConsoleColor.Green,
     textColor: ConsoleColor.DarkBlue);
 Console.ReadLine();
 
+Console.WriteLine("****Fun with Method Overloading*****");
+//вызов версии int метода Add()
+Console.WriteLine(Add(10,10));
+//вЫзод верисии long метода Add() с исп нвого раздеоителя
+Console.WriteLine(Add(900_000_000_000, 900_000_000_000));
+//вызов версии double метода Add() 
+Console.WriteLine(Add(4.3, 4.4);
+Console.ReadLine();
+
+
 //члены сжатые до выражений
 //синтаксический сахар
 static int Add1(int x, int y) => x + y;
@@ -154,3 +164,22 @@ static void DisplayFancyMessage(ConsoleColor textColor, ConsoleColor backgroundC
     Console.ForegroundColor = oldTextColor;
     Console.BackgroundColor = oldbackgroundColor;
 }
+
+//перегрезка методов 
+public static class AddOperations
+{
+    //перегруженный метод Add()
+    public static int Add(int x, int y)
+    {
+        return x + y;
+    }
+    //перегруженный метод Add()
+    public static double Add(double x, double y)
+    {
+        return x + y;
+    }
+    //перегруженный метод Add()
+    public static long Add(long x, long y)
+    {
+        return x + y;
+    }
